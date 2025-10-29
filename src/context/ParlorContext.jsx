@@ -1,3 +1,5 @@
+//Manages your in-app data for the Parlor Room — e.g. list of muses, adding/removing entries, caching API calls
+
 import { createContext, useState, useContext } from 'react'
 
 const ParlorContext = createContext()

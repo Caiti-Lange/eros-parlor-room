@@ -1,3 +1,5 @@
+//Displays one Muse (name, origin, epithets, image)
+
 export default function MuseCard({ muse }) {
   return (
     <article className="bg-white border border-[#efe8dd] rounded p-4 shadow-sm">

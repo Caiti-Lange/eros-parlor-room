@@ -1,0 +1,1 @@
+//The main dashboard showing your collection (“Your Parlor”). Displays all your muses, add button, etc

@@ -1,0 +1,1 @@
+//Manages the user’s authentication (login, logout, token). Provides a way to access the current user from any component.

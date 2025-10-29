@@ -1,0 +1,1 @@
+//Detailed view for a single Muse (epithets, reflections, artifacts)
