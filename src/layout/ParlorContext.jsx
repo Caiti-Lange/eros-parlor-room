@@ -1,18 +1,17 @@
 //Manages your in-app data for the Parlor Room — e.g. list of muses, adding/removing entries, caching API calls
 
-import { createContext, useState, useContext } from 'react'
+import { createContext, useContext, useState } from "react";
 
-const ParlorContext = createContext()
-export const useParlor = () => useContext(ParlorContext)
+const ParlorContext = createContext();
 
 export function ParlorProvider({ children }) {
-  const [muses, setMuses] = useState([])
+  const [parlor, setParlor] = useState("activities");
+  const value = { parlor, setParlor };
+  return <ParlorContext.Provider value={value}>{children}</ParlorContext.Provider>;
+}
 
-  const addMuse = muse => setMuses(prev => [...prev, muse])
-
-  return (
-    <ParlorContext.Provider value={{ muses, addMuse }}>
-      {children}
-    </ParlorContext.Provider>
-  )
+export function useParlor() {
+  const context = useContext(ParlorContext);
+  if (!context) throw Error("useParlor must be used within ParlorProvider");
+  return context;
 }
