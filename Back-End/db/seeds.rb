@@ -5,9 +5,8 @@ User.destroy_all
 Product.destroy_all
 
 puts "Creating fake users..."
-10.times do
+5.times do
   User.create!(
-    user_id: Faker::Number.id,
     first_name: Faker::Name.name,
     last_name: Faker::Name.name,
     username: Faker::Name.user,
@@ -21,7 +20,6 @@ users = User.all
 puts "Creating fake products..."
 20.times do
   Product.create!(
-    muse_id: Faker::Number.id,
     name: Faker::Name.name,
     origin: Faker::Name.name,
     media_type: Faker::Media.type,
