@@ -4,15 +4,15 @@ import "./index.css";
 import App from "./App.jsx";
 import {BrowserRouter}  from "react-router"
 import { AuthProvider } from "./auth/AuthContext.jsx";
-import { PageProvider } from "./layout/PageContext.jsx";
+import { ParlorProvider } from "./layout/ParlorContext.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <BrowserRouter>
        <AuthProvider>
-        <PageProvider>
+        <ParlorProvider>
          <App />
-        </PageProvider>
+        </ParlorProvider>
        </AuthProvider>
     </BrowserRouter>
   </StrictMode>

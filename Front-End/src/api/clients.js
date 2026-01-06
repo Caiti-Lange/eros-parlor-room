@@ -1,3 +1,5 @@
+/*
+
 import axios from 'axios'
 import client from '../api/client'
 
@@ -17,3 +19,6 @@ client.interceptors.request.use(config => {
 })
 
 export default client
+
+*/
+
