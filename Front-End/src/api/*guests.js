@@ -1,1 +1,0 @@
-// functions for guest/friend endpoints
