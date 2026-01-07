@@ -2,10 +2,10 @@ import { faker } from "@faker-js/faker";
 //import db from client.js
 import db from "#db/client";
 //db query functions
-import { createPlant } from "./queries/plants.js";
+import { createMuse } from "./queries/muses.js";
 import { createUser } from "./queries/users.js";
 //plantSpecies for seeding
-import plantSpecies from "./plantSpecies.js";
+import mediatype from "./mediatype.js";
 
 //connect to the database using pg
 await db.connect();
@@ -33,14 +33,14 @@ async function seedTables() {
 
     const randomNum = Math.round(Math.random());
 
-    const plant = {
-      water_frequency: `${Math.floor(Math.random() * 10) + 1} per ${
-        randomNum === 0 ? "day" : "week"
-      }`,
-      species: plantSpecies[Math.floor(Math.random() * plantSpecies.length)],
+    const muse = {
+      name: faker.person.name(),
+      origin: faker.title.title(),
+      media_origin: mediatype[Math.floor(Math.random() * mediatype.length)],
+      image_url: faker.internet.imageUrl(),
       user_id: user.user_id,
     };
 
-    await createPlant(plant);
+    await createMuse(muse);
   }
 }
