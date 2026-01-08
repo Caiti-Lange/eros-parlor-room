@@ -35,7 +35,7 @@ async function seedTables() {
 
     const muse = {
       name: faker.person.name(),
-      origin: faker.title.name(),
+      origin: faker.book.title(),
       media_origin: mediatype[Math.floor(Math.random() * mediatype.length)],
       image_url: faker.internet.imageUrl(),
       user_id: user.user_id,

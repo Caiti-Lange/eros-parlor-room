@@ -3,9 +3,6 @@ import {Route, Routes} from "react-router"
 import Navbar from "./layout/Navbar.jsx";
 import Register from "./auth/Register.js";
 import Login from "./auth/Login.jsx";
-import express from "express";
-
-const app = express();
 
 export default function App() {
   return (

@@ -12,7 +12,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "db:schema": "psql -d Eros -f ./db/schema.sql",
-    "db:seed": "node --env-file=.env db/seed.js"
+    "db:seed": "node --env-file=.env db/seed.js",
+    "start": "node --env-file=.env server.js",
+    "dev": "node --watch --env-file=../.env server.js"
   },
   "keywords": [],
   "author": "",
@@ -26,8 +28,5 @@
   "devDependencies": {
     "@faker-js/faker": "^10.2.0",
     "nodemon": "^3.1.11"
-  },
-   
-  "start": "node --env-file=.env server.js",
-  "dev": "node --watch --env-file=.env server.js"
+  }
 }
