@@ -6,8 +6,8 @@ const authRouter = express.Router();
 import requireBody from "#middlewares/requireBody";
 //utils
 import { createToken } from "#utils/jwt";
-//import db functions from /db/queries/books
-import { getUserByUsername, createUser } from "#db/queries/users";
+//import db functions from /db/queries/
+import { getUserByUsername, createUser } from "Back-End/db/queries/user.js";
 
 authRouter
   .route("/register")
