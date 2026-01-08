@@ -1,3 +1,26 @@
+
+body {
+  background-image: url("./assets/the-new-york-public-library-7ZY3k45u6j4-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+h1 {
+  color: rgb(157, 37, 77);
+}
+
+h2 {
+  color:mediumslateblue;
+}
+
+nav {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -11,8 +34,6 @@
   will-change: filter;
   transition: filter 300ms;
 }
-
-
 
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
@@ -36,8 +57,14 @@
   }
 }
 
-.card {
-  padding: 2em;
+.muse_card {
+  margin: 5%;
+  padding-left: 2%;
+  padding-right: 2%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  border: 1em #278eabaa;
+
 }
 
 .read-the-docs {

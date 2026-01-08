@@ -7,7 +7,6 @@ export default function Navbar() {
   const { setParlor } = useParlor();
   return (
     <header>
-      <p>Eros' Parlor Room</p>
       <nav>
         <NavLink to="/">Parlor Room</NavLink>
         <NavLink to="/login">Login</NavLink>

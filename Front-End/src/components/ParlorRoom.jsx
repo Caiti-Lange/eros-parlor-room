@@ -19,7 +19,7 @@ export default function Muses (){
         <>
         {muses &&(
             muses.map((muse)=>(
-                < div key={muse.id}>
+                < div class="muse_card" key={muse.id}>
                     <h1>{muse.name}</h1>
                     <h2>{muse.origin}</h2>
                     <h3>{muse.media_type}</h3>
