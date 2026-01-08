@@ -15,7 +15,7 @@ export async function getMuse() {
 }
 
 /**
- * Sends a new activity to the API to be created.
+ * Sends a new Muse to the API to be created.
  * A valid token is required.
  */
 export async function createMuse(token, Muse) {
