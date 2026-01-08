@@ -1,7 +1,7 @@
 import ParlorRoom from "./components/ParlorRoom.jsx";
-import {Route, Routes} from "react-router"
+import {Route, Routes} from "react-router-dom"
 import Navbar from "./layout/Navbar.jsx";
-import Register from "./auth/Register.js";
+import Register from "./auth/Registration.jsx";
 import Login from "./auth/Login.jsx";
 
 export default function App() {
@@ -11,14 +11,12 @@ export default function App() {
         <h1 className="header">Eros’ Parlor Room</h1>
         <p className="tagline">A salon for your beloved muses</p>
       </header>
-      <RouterProvider router={router}/>
-      <Navbar>
-        <Routes>
+      <Navbar></Navbar>
+      <Routes>
           <Route path="/register" element={<Register />} />
           <Route path="/login" element={<Login />} />
           <Route path="/" element={<ParlorRoom />} />
-        </Routes>
-      </Navbar>
+      </Routes>
     </div>
   
   )

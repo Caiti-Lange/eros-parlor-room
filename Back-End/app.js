@@ -14,7 +14,7 @@ app.use(express.json());
 app.use(getUserFromToken);
 
 app.use("/auth", authRouter);
-app.use("/plants", museRouter);
+app.use("/muses", museRouter);
 app.use("/users", usersRouter);
 
 app.get("/", (req, res) => {

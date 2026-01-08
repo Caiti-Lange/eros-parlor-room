@@ -7,7 +7,7 @@ export default function Muses (){
 
     useEffect (()=>{
         async function getMuse(){
-            const response= await fetch ("*API*")
+            const response= await fetch ("http://localhost:8080/muses")
             const result= await response.json()
             console.log (result)
 
@@ -22,6 +22,7 @@ export default function Muses (){
                 < div key={muse.id}>
                     <h1>{muse.name}</h1>
                     <h2>{muse.origin}</h2>
+                    <h3>{muse.media_type}</h3>
                     <img
                         src={muse.portrait}
                         alt={muse.name}
