@@ -7,7 +7,7 @@ import authRouter from "#api/auth";
 import museRouter from "#api/muses";
 import usersRouter from "#api/users";
 //middlewares
-import getUserFromToken from "#middlewares/getUserFromToken";
+import getUserFromToken from "#middleware/getUserFromToken";
 
 //use a JSON body parser for all routes
 app.use(express.json());

@@ -1,4 +1,4 @@
-import { getUserById } from "#db/queries/users";
+import { getUserById } from "#db/queries/user";
 import { verifyToken } from "#utils/jwt";
 
 export default async function getUserFromToken(req, res, next) {

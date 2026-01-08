@@ -3,11 +3,11 @@ import express from "express";
 //create express router
 const authRouter = express.Router();
 //middlewares
-import requireBody from "#middlewares/requireBody";
+import requireBody from "#middleware/requireBody";
 //utils
 import { createToken } from "#utils/jwt";
 //import db functions from /db/queries/
-import { getUserByUsername, createUser } from "Back-End/db/queries/user.js";
+import { getUserByUsername, createUser } from "../db/queries/user.js";
 
 authRouter
   .route("/register")

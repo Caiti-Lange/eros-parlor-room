@@ -52,7 +52,7 @@ export async function getMuseById(id) {
   return muse;
 }
 
-export async function updatePlant({
+export async function updateMuse({
   name,
   origin,
   media_type,

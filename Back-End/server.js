@@ -1,8 +1,8 @@
 //import app
-import app from "#app";
+import app from "./app.js";
 
 //import db client
-import db from "#db/client";
+import db from "./db/client.js";
 
 const PORT = process.env.PORT || 8080;
 

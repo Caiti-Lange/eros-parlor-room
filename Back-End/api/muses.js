@@ -3,8 +3,8 @@ import express from "express";
 //create express router
 const museRouter = express.Router();
 //middlewares
-import requireBody from "#middlewares/requireBody";
-import requireUser from "#middlewares/requireUser";
+import requireBody from "#middleware/requireBody";
+import requireUser from "#middleware/requireUser";
 //utils
 import { createToken } from "#utils/jwt";
 

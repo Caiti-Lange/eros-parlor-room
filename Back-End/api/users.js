@@ -3,7 +3,7 @@ import express from "express";
 //create express router
 const usersRouter = express.Router();
 //middlewares
-import requireUser from "#middlewares/requireUser";
+import requireUser from "#middleware/requireUser";
 
 // /users/ routes
 usersRouter.route("/").get(requireUser, async (req, res) => {
