@@ -1,1 +1,0 @@
-//A small list of descriptive tags (like “brooding,” “chivalrous”)

@@ -1,1 +1,0 @@
-//Text area where a user writes or edits their reflections or notes about a Muse.

@@ -1,1 +1,0 @@
-//Page to manage friend connections (invites, accepted guests)
