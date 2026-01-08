@@ -11,6 +11,8 @@ export async function createMuse({
   const sql = `
         INSERT INTO muses
             (name, origin, media_type, img_url, user_id)
+        VALUES 
+            ($1, $2, $3, $4, $5)
         RETURNING *
     `;
 
