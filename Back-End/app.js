@@ -1,5 +1,6 @@
 //import express
 import express from "express";
+import cors from "cors";
 //create express application
 const app = express();
 //routers
@@ -11,6 +12,7 @@ import getUserFromToken from "#middleware/getUserFromToken";
 
 //use a JSON body parser for all routes
 app.use(express.json());
+app.use(cors());
 app.use(getUserFromToken);
 
 app.use("/auth", authRouter);

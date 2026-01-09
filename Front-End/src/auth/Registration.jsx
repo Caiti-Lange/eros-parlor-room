@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useAuth } from "./AuthContext";
 import { useParlor } from "../layout/ParlorContext";
-import {NavLink} from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 /** A form that allows users to register for a new account */
 export default function Register() {
@@ -28,8 +28,20 @@ export default function Register() {
       <h1>Register for an account</h1>
       <form action={tryRegister}>
         <label>
+          First Name
+          <input type="text" name="first-name" required />
+        </label>
+        <label>
+          Last Name
+          <input type="text" name="last-name" required />
+        </label>
+        <label>
           Username
           <input type="text" name="username" required />
+        </label>
+        <label>
+          email
+          <input type="email" name="email" required />
         </label>
         <label>
           Password

@@ -5,7 +5,7 @@ import { createMuse } from "./api/muses";
 import { useAuth } from "./auth/AuthContext";
 
 /** Form for a user to create a new Muse with a name and description. */
-export default function MuseForm({ syncMuses }) {
+export default function museForm({ syncMuses }) {
   const { token } = useAuth();
 
   const [error, setError] = useState(null);
@@ -19,7 +19,7 @@ export default function MuseForm({ syncMuses }) {
     const portrait = formData.get("portrait");
 
     try {
-      await createActivity(token, { name, origin, media_type, portrait });
+      await createMuse(token, { name, origin, media_type, portrait });
       syncMuses();
     } catch (e) {
       setError(e.message);
@@ -36,7 +36,7 @@ export default function MuseForm({ syncMuses }) {
         </label>
         <label>
           Origin
-          <input type="text" name="description" />
+          <input type="text" name="origin" />
         </label>
         <label>
           Media Type

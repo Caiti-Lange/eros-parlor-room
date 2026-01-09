@@ -1,6 +1,7 @@
 import {useState} from "react";
 import {useAuth} from "./AuthContext"
 import {useParlor} from "../layout/ParlorContext"
+import { useNavigate } from "react-router";
 import {NavLink} from "react-router-dom";
 
 
@@ -8,6 +9,7 @@ export default function Login() {
     const {login} = useAuth();
     const {setParlor} = useParlor();
 
+    const navigate = useNavigate();
     const [error, setError] = useState(null);
 
     const tryLogin = async (formData) => {
@@ -18,6 +20,7 @@ export default function Login() {
         try {
             await login({ username, password });
             setParlor("parlor");
+            navigate("/parlor-room");
         } catch (e) {
             setError(e.message);
         }

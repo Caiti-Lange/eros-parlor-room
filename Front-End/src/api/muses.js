@@ -23,7 +23,7 @@ export async function createMuse(token, Muse) {
     throw Error("Please enter your Parlor Room to add a Muse.");
   }
 
-  const response = await fetch(API + "/Muses", {
+  const response = await fetch(API + "/parlor-room", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

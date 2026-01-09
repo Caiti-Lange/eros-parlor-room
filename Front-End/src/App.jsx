@@ -1,4 +1,5 @@
 import ParlorRoom from "./components/ParlorRoom.jsx";
+import AddMuse from "./components/AddMuse.jsx";
 import {Route, Routes} from "react-router-dom";
 import Navbar from "./layout/Navbar.jsx";
 import Register from "./auth/Registration.jsx";
@@ -18,7 +19,8 @@ export default function App() {
       <Routes>
           <Route path="/register" element={<Register />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/" element={<ParlorRoom />} />
+          <Route path="/parlor-room" element={<ParlorRoom />} />
+          <Route path="/add-muse" element={<AddMuse />} />
       </Routes>
     </div>
   

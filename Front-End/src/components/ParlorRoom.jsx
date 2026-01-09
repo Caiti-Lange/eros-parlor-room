@@ -1,13 +1,14 @@
 //The main dashboard showing your collection (“Your Parlor”). Displays all your muses, add button, etc
 
 import { useEffect, useState } from "react";
+import {museForm} from "./AddMuse"
 
 export default function parlorRoom (){
     const [muses, setMuse] = useState ([])
 
     useEffect (()=>{
         async function getMuse(){
-            const response= await fetch ("http://localhost:8080/muses")
+            const response= await fetch ("http://localhost:8080/parlor-room")
             const result= await response.json()
             console.log (result)
 
@@ -19,6 +20,12 @@ export default function parlorRoom (){
         <>
         {muses &&(
             muses.map((muse)=>(
+                <div class ="parlor-room">
+                <div class="add-muse">
+                    <nav>
+                        <NavLink to="/add-muse">🕯️Add a new Muse to your Parlor Room🕯️</NavLink>
+                    </nav>
+                </div>
                 <div class="muse_card" key={muse.id}>
                     <h1>{muse.name}</h1>
                     <h2>{muse.origin}</h2>
@@ -35,7 +42,9 @@ export default function parlorRoom (){
                         Muse Details
                     </button> */}
                 </div>
+                </div>
             ))
+           
         )
         }
         </>
