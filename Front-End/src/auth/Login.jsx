@@ -1,6 +1,8 @@
 import {useState} from "react";
 import {useAuth} from "./AuthContext"
 import {useParlor} from "../layout/ParlorContext"
+import {NavLink} from "react-router-dom";
+
 
 export default function Login() {
     const {login} = useAuth();
@@ -36,7 +38,9 @@ export default function Login() {
                 <button>Login</button>
                 {error && <p role="alert">{error}</p>}
             </form>
-            <NavLink to="/register">Need an account? Register here.</NavLink>
+            <nav>
+                <NavLink to="/register">Need an account? Register here.</NavLink>
+            </nav>
         </>
     );
 }

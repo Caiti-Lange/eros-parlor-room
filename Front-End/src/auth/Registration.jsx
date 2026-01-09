@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useAuth } from "./AuthContext";
 import { useParlor } from "../layout/ParlorContext";
+import {NavLink} from "react-router-dom";
 
 /** A form that allows users to register for a new account */
 export default function Register() {
@@ -37,7 +38,9 @@ export default function Register() {
         <button>Register</button>
         {error && <p role="alert">{error}</p>}
       </form>
-      <NavLink to="/login">Already have an account? Log in here.</NavLink>
+      <nav>
+        <NavLink to="/login">Already have an account? Log in here.</NavLink>
+      </nav>
     </>
   );
 }

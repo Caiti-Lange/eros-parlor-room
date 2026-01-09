@@ -1,5 +1,5 @@
 //Displays one Muse (name, origin, epithets, image)
-
+{/*
 import { getMuse } from "../api/muse";
 import { useState, useEffect } from "react";
 import { Link, useParams } from "react-router";
@@ -31,3 +31,5 @@ export default function museCard() {
     </article>
   );
 }
+
+*/}

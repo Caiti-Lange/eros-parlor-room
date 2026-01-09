@@ -28,12 +28,12 @@ export default function parlorRoom (){
                         alt={muse.name}
                         style={{ width: "150px", height: "auto", objectFit: "cover" }}
                     ></img>
-                    <button
+            {/*        <button
                         onClick={() => alert(muse.details || "No details available")}
                         style={{ marginRight: "10px" }}
                     >
                         Muse Details
-                    </button>
+                    </button> */}
                 </div>
             ))
         )
