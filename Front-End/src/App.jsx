@@ -1,9 +1,10 @@
 import ParlorRoom from "./components/ParlorRoom.jsx";
-import {Route, Routes} from "react-router-dom"
+import {Route, Routes} from "react-router-dom";
 import Navbar from "./layout/Navbar.jsx";
 import Register from "./auth/Registration.jsx";
 import Login from "./auth/Login.jsx";
 import "./app.css";
+
 
 
 export default function App() {

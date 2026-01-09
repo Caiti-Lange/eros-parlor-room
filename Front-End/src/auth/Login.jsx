@@ -17,7 +17,7 @@ export default function Login() {
         const password = formData.get("password");
         try {
             await login({ username, password });
-            setParlor("activities");
+            setParlor("parlor");
         } catch (e) {
             setError(e.message);
         }

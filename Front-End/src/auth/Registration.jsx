@@ -17,7 +17,7 @@ export default function Register() {
     const password = formData.get("password");
     try {
       await register({ username, password });
-      setParlor("activities");
+      setParlor("parlor");
     } catch (e) {
       setError(e.message);
     }
