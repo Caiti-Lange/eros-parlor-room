@@ -3,7 +3,7 @@
 import { createContext, useContext, useState } from "react";
 
 
-const API = import.meta.env.VITE_API;
+const API = "http://localhost:8080";
 
 const AuthContext = createContext();
 
@@ -11,7 +11,7 @@ export function AuthProvider({ children }) {
   const [token, setToken] = useState();
 
   const register = async (credentials) => {
-    const response = await fetch(API + "/users/register", {
+    const response = await fetch(API + "/auth/register", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(credentials),
@@ -24,7 +24,7 @@ export function AuthProvider({ children }) {
   };
 
   const login = async (credentials) => {
-    const response = await fetch(API + "/users/login", {
+    const response = await fetch(API + "/auth/login", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(credentials),

@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 
-export default function Muses (){
+export default function parlorRoom (){
     const [muses, setMuse] = useState ([])
 
     useEffect (()=>{
@@ -19,7 +19,7 @@ export default function Muses (){
         <>
         {muses &&(
             muses.map((muse)=>(
-                < div class="muse_card" key={muse.id}>
+                <div class="muse_card" key={muse.id}>
                     <h1>{muse.name}</h1>
                     <h2>{muse.origin}</h2>
                     <h3>{muse.media_type}</h3>

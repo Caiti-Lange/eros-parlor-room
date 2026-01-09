@@ -15,6 +15,6 @@ CREATE TABLE muse (
   name text,
   origin text NOT NULL,
   media_type text NOT NULL,
-  img_url text,
+  portrait text,
   user_id integer UNIQUE REFERENCES users(user_id) ON DELETE CASCADE
 );

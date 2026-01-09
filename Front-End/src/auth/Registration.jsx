@@ -37,9 +37,7 @@ export default function Register() {
         <button>Register</button>
         {error && <p role="alert">{error}</p>}
       </form>
-      <a onClick={() => setParlor("login")}>
-        Already have an account? Log in here.
-      </a>
+      <NavLink to="/login">Already have an account? Log in here.</NavLink>
     </>
   );
 }
