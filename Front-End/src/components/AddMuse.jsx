@@ -1,8 +1,8 @@
 //Form to add a new Muse to your Parlor Room
 
 import { useState } from "react";
-import { createMuse } from "./api/muses";
-import { useAuth } from "./auth/AuthContext";
+import { createMuse } from "../api/muses";
+import { useAuth } from "../auth/AuthContext";
 
 /** Form for a user to create a new Muse with a name and description. */
 export default function museForm({ syncMuses }) {

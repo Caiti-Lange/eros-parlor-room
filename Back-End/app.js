@@ -16,7 +16,7 @@ app.use(cors());
 app.use(getUserFromToken);
 
 app.use("/auth", authRouter);
-app.use("/muses", museRouter);
+app.use("/parlor-room", museRouter);
 app.use("/users", usersRouter);
 
 app.get("/", (req, res) => {
