@@ -48,6 +48,9 @@ export default function museForm({ syncMuses }) {
         </label>
         <button>Add Muse</button>
       </form>
+      <nav>
+        <NavLink to="/parlor-room">🕯️Back to your Parlor Room🕯️</NavLink>
+      </nav>
       {error && <p role="alert">{error}</p>}
     </>
   );
