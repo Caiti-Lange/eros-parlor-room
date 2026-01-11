@@ -3,12 +3,19 @@
 import { useState } from "react";
 import { createMuse } from "../api/muses";
 import { useAuth } from "../auth/AuthContext";
+import { NavLink } from "react-router-dom";
 
 /** Form for a user to create a new Muse with a name and description. */
 export default function museForm({ syncMuses }) {
   const { token } = useAuth();
 
   const [error, setError] = useState(null);
+  const clickSubmit = async (event) => {
+    event.preventDefault();
+    const formData = new FormData(event.currentTarget);
+    await tryCreateMuse(formData);
+  }
+
 
   const tryCreateMuse = async (formData) => {
     setError(null);
@@ -26,10 +33,12 @@ export default function museForm({ syncMuses }) {
     }
   };
 
+
+
   return (
     <>
       <h2>🕯️Add a new Muse to your Parlor Room🕯️</h2>
-      <form action={tryCreateMuse}>
+      <form onSubmit={clickSubmit}>
         <label>
           Name
           <input type="text" name="name" />
@@ -44,9 +53,9 @@ export default function museForm({ syncMuses }) {
         </label>
         <label>
           Potrait
-          <input type="image" name="portrait" />
+          <input type="file" name="portrait" />
         </label>
-        <button>Add Muse</button>
+        <button type="submit">Add Muse</button>
       </form>
       <nav>
         <NavLink to="/parlor-room">🕯️Back to your Parlor Room🕯️</NavLink>

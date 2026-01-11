@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { useAuth } from "../auth/AuthContext";
+import { NavLink } from "react-router-dom";
 
 export default function parlorRoom (){
     const { token } = useAuth();
@@ -27,13 +28,9 @@ export default function parlorRoom (){
         <>
         {muses &&(
             muses.map((muse)=>(
-                <div class ="parlor-room">
-                    <div class="add-muse">
-                        <nav>
-                            <NavLink to="/add-muse">🕯️Add a new Muse to your Parlor Room🕯️</NavLink>
-                        </nav>
-                    </div>
-                    <div class="muse_card" key={muse.id}>
+                <div className ="parlor-room">
+                    
+                    <div className="muse_card" key={muse.id}>
                         <h1>{muse.name}</h1>
                         <h2>{muse.origin}</h2>
                         <h3>{muse.media_type}</h3>
@@ -51,9 +48,13 @@ export default function parlorRoom (){
                     </div>
                 </div>
             ))
-           
-        )
-        }
+        
+        )}
+        <div className="add-muse">
+            <nav>
+                <NavLink to="/add-muse">🕯️Add a new Muse to your Parlor Room🕯️</NavLink>
+            </nav>
+        </div>
         </>
     )
 }
