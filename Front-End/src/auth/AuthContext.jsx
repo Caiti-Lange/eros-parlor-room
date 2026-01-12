@@ -2,7 +2,6 @@
 
 import { createContext, useContext, useState } from "react";
 
-
 const API = "http://localhost:8080";
 
 const AuthContext = createContext();
@@ -11,7 +10,7 @@ export function AuthProvider({ children }) {
   const [token, setToken] = useState();
 
   const register = async (credentials) => {
-    const response = await fetch(API + "/auth/register", {
+    const response = await fetch(API + "/register", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(credentials),
@@ -24,7 +23,7 @@ export function AuthProvider({ children }) {
   };
 
   const login = async (credentials) => {
-    const response = await fetch(API + "/auth/login", {
+    const response = await fetch(API + "/login", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(credentials),

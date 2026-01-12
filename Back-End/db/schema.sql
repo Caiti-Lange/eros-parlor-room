@@ -1,4 +1,4 @@
-DROP TABLE IF EXISTS muse;
+DROP TABLE IF EXISTS muses;
 DROP TABLE IF EXISTS users;
 
 CREATE TABLE users (
@@ -10,7 +10,7 @@ CREATE TABLE users (
   email text
 );
 
-CREATE TABLE muse (
+CREATE TABLE muses (
   muse_id serial PRIMARY KEY,
   name text,
   origin text NOT NULL,

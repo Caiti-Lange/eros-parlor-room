@@ -3,7 +3,7 @@ import { faker } from "@faker-js/faker";
 import db from "#db/client";
 //db query functions
 import { createMuse } from "./queries/muses.js";
-import { createUser } from "./queries/users.js";
+import { createUser } from "./queries/user.js";
 //plantSpecies for seeding
 import mediatype from "./mediatype.js";
 
@@ -34,10 +34,10 @@ async function seedTables() {
     const randomNum = Math.round(Math.random());
 
     const muse = {
-      name: faker.person.name(),
+      name: faker.person.firstName(),
       origin: faker.book.title(),
       media_origin: mediatype[Math.floor(Math.random() * mediatype.length)],
-      image_url: faker.internet.imageUrl(),
+      portrait: faker.image.personPortrait(),
       user_id: user.user_id,
     };
 

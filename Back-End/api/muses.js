@@ -27,7 +27,7 @@ museRouter
 
     res.send({ muse });
   })
-  .post(requireBody(["name", "origin", "media_origin", "image_url"]), async (req, res) => {
+  .post(requireBody(["name", "origin", "media_origin", "portrait"]), async (req, res) => {
     const muse = await createMuse({
       ...req.body,
       user_id: req.user.user_id,
@@ -53,14 +53,14 @@ museRouter
     res.send(req.muse);
   })
   .put(requireBody([]), async (req, res) => {
-    const { name, origin, media_origin, img_url } = req.body;
+    const { name, origin, media_origin, portrait } = req.body;
 
     const muse = await updateMuse({
       muse_id: req.params.id,
       name,
       origin,
       media_origin,
-      img_url,
+      portrait,
     });
 
     res.send({ muse });

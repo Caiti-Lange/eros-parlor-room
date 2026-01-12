@@ -5,7 +5,7 @@ const API = import.meta.env.VITE_API;
 /** Fetches an array of activities from the API. */
 export async function getMuse() {
   try {
-    const response = await fetch(API + "/muses");
+    const response = await fetch(API + "/parlor-room");
     const result = await response.json();
     return result;
   } catch (e) {

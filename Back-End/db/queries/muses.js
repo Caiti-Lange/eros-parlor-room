@@ -5,12 +5,12 @@ export async function createMuse({
     name = "",
     origin = "",
     media_type,
-    img_url = "",
+    portrait = "",
     user_id,
 }) {
   const sql = `
         INSERT INTO muses
-            (name, origin, media_type, img_url, user_id)
+            (name, origin, media_type, portrait, user_id)
         VALUES 
             ($1, $2, $3, $4, $5)
         RETURNING *
@@ -18,7 +18,7 @@ export async function createMuse({
 
   const {
     rows: [muse],
-  } = await db.query(sql, [name, origin, media_type, img_url, user_id]);
+  } = await db.query(sql, [name, origin, media_type, portrait, user_id]);
 
   return muse;
 }
@@ -56,7 +56,7 @@ export async function updateMuse({
   name,
   origin,
   media_type,
-  img_url,
+  portrait,
   user_id
 }) {
   const updates = [];
@@ -78,9 +78,9 @@ export async function updateMuse({
     values.push(media_type);
     paramCount++;
   }
-  if (img_url !== undefined) {
-    updates.push(`img_url = $${paramCount}`);
-    values.push(img_url);
+  if (portrait !== undefined) {
+    updates.push(`portrait = $${paramCount}`);
+    values.push(portrait);
     paramCount++;
   }
 
