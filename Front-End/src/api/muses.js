@@ -22,14 +22,15 @@ export async function createMuse(token, Muse) {
   if (!token) {
     throw Error("Please enter your Parlor Room to add a Muse.");
   }
+console.log(API);
 
   const response = await fetch(API + "/parlor-room", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
-      Authorization: "Bearer " + token,
+      Authorization: token,
     },
-    body: JSON.stringify(muse),
+    body: JSON.stringify(Muse),
   });
 
   if (!response.ok) {

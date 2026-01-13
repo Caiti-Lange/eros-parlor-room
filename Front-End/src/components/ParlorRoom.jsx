@@ -14,13 +14,13 @@ export default function parlorRoom (){
                 method: "GET",
                 headers: {
                     "Content-Type": "application/json",
-                    Authorization: `Bearer ${token}`,
+                    Authorization: `${token}`,
       },
     })
             const result= await response.json()
             console.log (result)
 
-            setMuse(result)
+            setMuse(result.muse)
         } getMuse()
     },[])
 

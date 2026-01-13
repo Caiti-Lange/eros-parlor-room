@@ -16,5 +16,5 @@ CREATE TABLE muses (
   origin text NOT NULL,
   media_type text NOT NULL,
   portrait text,
-  user_id integer UNIQUE REFERENCES users(user_id) ON DELETE CASCADE
+  user_id integer REFERENCES users(user_id) ON DELETE CASCADE
 );

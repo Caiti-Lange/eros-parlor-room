@@ -3,11 +3,12 @@
 import { useState } from "react";
 import { createMuse } from "../api/muses";
 import { useAuth } from "../auth/AuthContext";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 /** Form for a user to create a new Muse with a name and description. */
 export default function museForm({ syncMuses }) {
   const { token } = useAuth();
+  const toParlor = useNavigate();
 
   const [error, setError] = useState(null);
   const clickSubmit = async (event) => {
@@ -27,12 +28,12 @@ export default function museForm({ syncMuses }) {
 
     try {
       await createMuse(token, { name, origin, media_type, portrait });
-      syncMuses();
+      toParlor("/parlor-room");
     } catch (e) {
       setError(e.message);
+      console.log(e);
     }
   };
-
 
 
   return (

@@ -7,7 +7,7 @@ export async function getUser(token) {
     const response = await fetch(API + "/user", {
         headers: {
             "Content-Type": "application/json",
-            Authorization: "Bearer " + token,
+            Authorization: token,
         }
     });
     const result = await response.json();
